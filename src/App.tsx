@@ -8,6 +8,7 @@ import FriendPage from "./pages/FriendPage";
 import MainPage from "./pages/MainPage";
 import MyPage from "./pages/MyPage";
 import QuestionPage from "./pages/QuestionPage";
+import Tabbar from "./component/common/tabbar";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/question" element={<QuestionPage />} />
           <Route path="/friend" element={<FriendPage />} />
         </Routes>
+        <Tabbar />
       </BrowserRouter>
     </ThemeProvider>
   );

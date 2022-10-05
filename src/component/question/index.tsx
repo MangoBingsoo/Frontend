@@ -1,6 +1,6 @@
 import { DATA_FOR_WOMAN } from "../../shared/question";
-import * as S from "./style";
 import * as I from "../../Asset/index";
+import * as S from "./style";
 
 const Question = () => {
   return (

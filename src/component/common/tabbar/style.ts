@@ -21,4 +21,6 @@ export const ListElement = styled.li`
   z-index: 10;
 `;
 
-export const StyledSvg = styled.div``;
+export const StyledSvg = styled.div`
+  fill: red;
+`;

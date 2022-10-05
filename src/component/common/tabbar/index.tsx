@@ -2,13 +2,14 @@ import * as S from "./style";
 import * as I from "../../../Asset/index";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { css } from "styled-components";
+import { theme } from "../../../theme";
 
 const Tabbar: React.FC = () => {
   const { pathname } = useLocation();
 
-  const select = (currentPath: string) =>
-    currentPath === pathname && css({ fill: "#DE8282" });
+  const select = (currentPath: string) => {
+    return currentPath === pathname ? theme.main : theme.gray500;
+  };
 
   return (
     <>
@@ -17,23 +18,29 @@ const Tabbar: React.FC = () => {
           <S.ListElement>
             <Link to={"/friend"}>
               <S.StyledSvg>
-                <I.Friend />
+                <I.Friend color={select("/friend")} />
               </S.StyledSvg>
             </Link>
           </S.ListElement>
           <S.ListElement>
-            <Link to={"/main"}>
-              <I.Main />
+            <Link to={"/"}>
+              <S.StyledSvg>
+                <I.Main color={select("/")} />
+              </S.StyledSvg>
             </Link>
           </S.ListElement>
           <S.ListElement>
             <Link to={"/question"}>
-              <I.Question />
+              <S.StyledSvg>
+                <I.Question color={select("/question")} />
+              </S.StyledSvg>
             </Link>
           </S.ListElement>
           <S.ListElement>
             <Link to={"/my"}>
-              <I.Mypage />
+              <S.StyledSvg>
+                <I.Mypage color={select("/my")} />
+              </S.StyledSvg>
             </Link>
           </S.ListElement>
         </S.TabbarList>
