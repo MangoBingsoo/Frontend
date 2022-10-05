@@ -1,3 +1,7 @@
+import React from "react";
+import "./global.css";
+import { theme } from "./theme";
+import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FriendPage from "./pages/FriendPage";
@@ -7,6 +11,7 @@ import QuestionPage from "./pages/QuestionPage";
 
 function App() {
   return (
+  <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -15,6 +20,7 @@ function App() {
         <Route path="/friend" element={<FriendPage />} />
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
