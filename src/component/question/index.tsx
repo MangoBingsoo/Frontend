@@ -28,7 +28,10 @@ const Question = () => {
     <S.QuestionPageWRap>
       <S.QuestionTitleWrap>
         <S.QuestionTitle>
-          월경이 궁금한 <span style={{ color: `${theme.main}` }}>남성</span>
+          월경이 궁금한{" "}
+          <span style={{ color: `${theme.main}` }}>
+            {category === 0 ? "남성" : category === 1 ? "여성" : "학생"}
+          </span>
           분들을위해
         </S.QuestionTitle>
       </S.QuestionTitleWrap>
@@ -82,17 +85,32 @@ const Question = () => {
                     <S.QuestionCharWrap>Q. </S.QuestionCharWrap>
                     <span>{question.question}</span>
                   </div>
-                  <S.QuestionUnderArrow
-                    onClick={() => {
-                      setIsClicked((prev) =>
-                        prev.map((value: any, idx) =>
-                          idx === question.id ? !value : value
-                        )
-                      );
-                    }}
-                  >
-                    <I.UnderArrow />
-                  </S.QuestionUnderArrow>
+                  {isClicked[question.id] ? (
+                    <S.QuestionUnderArrow
+                      onClick={() => {
+                        setIsClicked((prev) =>
+                          prev.map((value: any, idx) =>
+                            idx === question.id ? !value : value
+                          )
+                        );
+                      }}
+                      style={{ transform: "rotate(180deg)" }}
+                    >
+                      <I.UnderArrow color={theme.white} />
+                    </S.QuestionUnderArrow>
+                  ) : (
+                    <S.QuestionUnderArrow
+                      onClick={() => {
+                        setIsClicked((prev) =>
+                          prev.map((value: any, idx) =>
+                            idx === question.id ? !value : value
+                          )
+                        );
+                      }}
+                    >
+                      <I.UnderArrow color={theme.gray700} />
+                    </S.QuestionUnderArrow>
+                  )}
                 </S.QuestionWrap>
                 {isClicked[question.id] && (
                   <S.QueestionWithAnswer>
