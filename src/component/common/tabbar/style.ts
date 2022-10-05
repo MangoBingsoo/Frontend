@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const TabbarWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
   display: flex;
   width: 100%;
   height: 49px;
