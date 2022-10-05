@@ -8232,6 +8232,7 @@ styled-components@^5.3.6:
     shallowequal "^1.1.0"
     supports-color "^5.5.0"
 
+
 stylehacks@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/stylehacks/-/stylehacks-5.1.0.tgz#a40066490ca0caca04e96c6b02153ddc39913520"
