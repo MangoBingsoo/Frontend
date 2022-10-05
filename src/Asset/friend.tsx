@@ -2,7 +2,6 @@ type SvgType = {
   color: string;
 };
 
-//webhook test
 export const Friend = ({ color }: SvgType) => {
   return (
     <svg
