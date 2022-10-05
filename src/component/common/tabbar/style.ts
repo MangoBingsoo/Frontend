@@ -20,3 +20,5 @@ export const ListElement = styled.li`
   cursor: pointer;
   z-index: 10;
 `;
+
+export const StyledSvg = styled.div``;
