@@ -1,5 +1,7 @@
+import { Question } from "../component";
+
 const QuestionPage: React.FC = () => {
-  return <></>;
+  return <Question />;
 };
 
 export default QuestionPage;
