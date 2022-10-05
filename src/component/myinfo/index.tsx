@@ -5,7 +5,7 @@ interface Props {
   id: number;
 }
 
-const MyPage = ({ text, id }: Props) => {
+const MyInfo = ({ text, id }: Props) => {
   return (
     <>
       <S._ProfileWrapper>
@@ -18,4 +18,4 @@ const MyPage = ({ text, id }: Props) => {
   );
 };
 
-export default MyPage;
+export default MyInfo;

@@ -7,7 +7,6 @@ import * as S from "./style";
 import * as I from "../../Asset/index";
 import { theme } from "../../theme";
 import { useEffect, useState } from "react";
-import { queries } from "@testing-library/react";
 
 const Question = () => {
   const DATA = [DATA_FOR_MAN, DATA_FOR_WOMAN, DATA_FOR_CHILDREN];
