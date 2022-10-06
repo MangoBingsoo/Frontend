@@ -18,7 +18,7 @@ const Question = () => {
   useEffect(() => {
     console.log(category);
     setIsClicked(new Array(DATA[category].length).fill(false));
-  }, [category]);
+  }, [DATA, category]);
   useEffect(() => {
     console.log(isClicked);
   }, [isClicked]);
