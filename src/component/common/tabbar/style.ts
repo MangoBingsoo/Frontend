@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TabbarWrapper = styled.div`
   position: fixed;
-  bottom: 0;
+  bottom: 34px;
   display: flex;
   width: 100%;
   height: 49px;

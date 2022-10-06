@@ -97,7 +97,7 @@ export const _PlusButton = styled.div`
   position: fixed;
   display: flex;
   right: 20px;
-  bottom: 78px;
+  bottom: 100px;
   box-shadow: 0 4px 5px 0px rgb(0 0 0 / 0.3); ;
 `;
 
