@@ -19,7 +19,9 @@ const FriendAdd = () => {
           placeholder="추가하고 싶은 친구의 ID를 적어주세요."
         ></S._InputBox>
       </S._InputWrapper>
-      <S._ButtonContainer disable={!value}>등록</S._ButtonContainer>
+      <S._ButtonContainer onClick={() => navigate(-1)} disable={!value}>
+        등록
+      </S._ButtonContainer>
     </S._FriendAddContainer>
   );
 };
