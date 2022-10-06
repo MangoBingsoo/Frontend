@@ -2,6 +2,7 @@ import * as S from "./style";
 import * as I from "../../Asset";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // css import
+import useMember from "../../hooks/user/useMember";
 import { useCallback, useState, MouseEvent, useEffect } from "react";
 import { emotionImage } from "../../Asset/common/emotionImages";
 import { theme } from "../../theme";
@@ -29,7 +30,7 @@ const Main: React.FC = () => {
     e.stopPropagation();
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
     getFeel();
   }, [value]);
 
@@ -67,6 +68,7 @@ const Main: React.FC = () => {
     setState(null);
     return false;
   };
+
 
   return (
     <div onClick={() => setIsClick(false)} style={{ height: "100vh" }}>

@@ -20,10 +20,11 @@ export const _MainTextBox = styled.div<{
     font-size: 22px;
     color: ${({ theme, highlightColor }) => theme[highlightColor]};
   }
+  margin-top: 30px;
 `;
 
 export const _CardBox = styled.div`
-  margin: 12px 0 40px 0;
+  margin: 12px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 12px 14px;
@@ -97,6 +98,28 @@ export const _PlusButton = styled.div`
   position: fixed;
   display: flex;
   right: 20px;
-  bottom: 78px;
+  bottom: 100px;
   box-shadow: 0 4px 5px 0px rgb(0 0 0 / 0.3); ;
+`;
+
+export const _DeleteModal = styled.div`
+  width: 68px;
+  height: 28px;
+  background-color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.system_red};
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  position: absolute;
+  top: 36px;
+  right: 13px;
+`;
+
+export const Row = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 `;
