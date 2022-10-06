@@ -1,7 +1,7 @@
-import { Auth } from "../../component";
+import { Oauth } from "../../component";
 
 const AuthPage: React.FC = () => {
-  return <Auth />;
+  return <Oauth />;
 };
 
 export default AuthPage;
