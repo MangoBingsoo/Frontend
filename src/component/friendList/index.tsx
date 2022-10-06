@@ -19,16 +19,16 @@ const FriendList = () => {
           period="생리 3일차"
           emotionType="sensitive"
         />
-        <FriendCardMain name="김의찬" period="생리 1주차" emotionType="nomal" />
+        <FriendCardMain name="김의찬" period="생리 5일차" emotionType="nomal" />
       </S.Row>
       <S.Row>
-        <FriendCardMain name="주보미" period="생리 2일차" emotionType="sad" />
+        <FriendCardMain name="이정윤" period="생리 1일차" emotionType="sad" />
       </S.Row>
       <S._MainTextBox color="black" highlightColor="secondary">
         <i>생리 예정</i>인 친구
       </S._MainTextBox>
       <S.Row>
-        <FriendCardSecondary name="양채원" period="1주 뒤 예정" />
+        <FriendCardSecondary name="전영준" period="1일 뒤 예정" />
         <FriendCardSecondary name="정대현" period="3일 뒤 예정" />
       </S.Row>
       <S.Row>
