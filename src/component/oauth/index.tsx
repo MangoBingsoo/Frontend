@@ -12,11 +12,11 @@ const Oauth = () => {
 
   const move = (res: any) => {
     AuthApi.loginSuccess(res);
-    navigate("/");
+    navigate("/main");
   };
   return (
     <S.AuthFormWrap backgroundColor={theme.main}>
-      <GoogleOAuthProvider clientId="855900935733-f92mbjenabosc87238u6ss54hnoblkus.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId={String(process.env.REACT_APP_CLIENTID)}>
         <GoogleLogin onSuccess={move} onError={AuthApi.loginFailure} />
       </GoogleOAuthProvider>
     </S.AuthFormWrap>
