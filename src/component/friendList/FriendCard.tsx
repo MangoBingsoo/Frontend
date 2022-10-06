@@ -62,7 +62,11 @@ export const FriendCardSecondary = ({ name, period }: friendInfo) => {
   );
 };
 
-export const FriendCardGray = () => {
+type PropsType = {
+  state: boolean;
+};
+
+export const FriendCardGray = ({ state }: PropsType) => {
   return (
     <S._CardBox>
       <S._ProfileCardGray>
@@ -97,6 +101,14 @@ export const FriendCardGray = () => {
         <S._UserName color="gray700">김철수</S._UserName>
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
+      {state ? (
+        <S._ProfileCardGray>
+          <S._UserName color="gray700">윤지빈</S._UserName>
+          <img src={MeatballmenuGray} />
+        </S._ProfileCardGray>
+      ) : (
+        <></>
+      )}
     </S._CardBox>
   );
 };

@@ -4,10 +4,13 @@ import {
   FriendCardSecondary,
   FriendCardGray,
 } from "./FriendCard";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const FriendList = () => {
   const navigate = useNavigate();
+  const location = useLocation().state as any;
+  console.log(location);
+
   return (
     <S._FriendListContainer>
       <S._MainTextBox color="black" highlightColor="main">
@@ -38,7 +41,7 @@ const FriendList = () => {
       <S._MainTextBox color="gray700" highlightColor="white">
         그 외 친구
       </S._MainTextBox>
-      <FriendCardGray />
+      <FriendCardGray state={location} />
       <S._PlusButton
         onClick={() => {
           navigate("/friend_add");
