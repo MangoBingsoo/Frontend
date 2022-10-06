@@ -1,7 +1,7 @@
-import FriendList from "../component/friendList/FriendList";
+import { FriendList } from "../../component";
 
 const FriendPage: React.FC = () => {
-  return <FriendList></FriendList>;
+  return <FriendList />;
 };
 
 export default FriendPage;
