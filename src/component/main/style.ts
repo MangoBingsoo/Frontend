@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../theme";
 
 export const TextBox = styled.div`
   margin-top: 40px;
@@ -21,3 +20,43 @@ export const Text = styled.li`
     color: #de8282;
   }
 `;
+
+export const StyledCalendar = styled.div`
+  width: 371px;
+  margin: auto;
+  padding-top: 40px;
+
+  .react-calendar {
+    width: 100%;
+  }
+`;
+
+export const EmotionWrapper = styled.div`
+  width: 373px;
+  height: 164px;
+  background: #de828233;
+  margin: auto;
+  margin-top: 60px;
+  justify-content: center;
+`;
+
+export const EmotionTextBox = styled.div`
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+`;
+export const EmotionText = styled.ul`
+  display: flex;
+  list-style: none;
+  gap: 6px;
+  font-weight: 500;
+`;
+
+export const EmojiBox = styled.div`
+  width: 328px;
+  height: 64px;
+`;
+
+export const EmojiTextBox = styled.div``;

@@ -1,5 +1,6 @@
 import * as S from "./style";
 import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css"; // css import
 
 const Main: React.FC = () => {
   return (
@@ -11,8 +12,20 @@ const Main: React.FC = () => {
           <S.Text className="date">13일</S.Text>
           <S.Text>남았습니다.</S.Text>
         </S.DateTextList>
-        <Calendar />
       </S.TextBox>
+      <S.StyledCalendar>
+        <Calendar />
+      </S.StyledCalendar>
+      <S.EmotionWrapper>
+        <S.EmotionTextBox>
+          <S.EmotionText>
+            <S.Text className="date">7일,</S.Text>
+            <S.Text>추혜연님의 기분을 들려주세요</S.Text>
+          </S.EmotionText>
+        </S.EmotionTextBox>
+        <S.EmojiBox />
+        <S.EmojiTextBox />
+      </S.EmotionWrapper>
     </>
   );
 };
