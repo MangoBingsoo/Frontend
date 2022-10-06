@@ -70,7 +70,7 @@ export const FriendCardGray = ({ state }: PropsType) => {
   return (
     <S._CardBox>
       <S._ProfileCardGray>
-        <S._UserName color="gray700">이정윤</S._UserName>
+        <S._UserName color="gray700">손재민</S._UserName>
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
       <S._ProfileCardGray>
