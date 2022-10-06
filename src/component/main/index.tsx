@@ -14,7 +14,7 @@ const Main: React.FC = () => {
         </S.DateTextList>
       </S.TextBox>
       <S.StyledCalendar>
-        <Calendar />
+        <Calendar calendarType="US" />
       </S.StyledCalendar>
       <S.EmotionWrapper>
         <S.EmotionTextBox>
