@@ -1,4 +1,5 @@
 import * as S from "./style";
+import * as I from "../../Asset";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // css import
 
@@ -23,8 +24,22 @@ const Main: React.FC = () => {
             <S.Text>추혜연님의 기분을 들려주세요</S.Text>
           </S.EmotionText>
         </S.EmotionTextBox>
-        <S.EmojiBox />
-        <S.EmojiTextBox />
+        <S.EmojiBoxWrapper>
+          <S.EmojiBoxList>
+            <S.EmojiBox>
+              <S.Emoji src="/images/happy.png" alt="happy" className="happy" />
+            </S.EmojiBox>
+            <S.EmojiBox>
+              <S.Emoji src="/images/soso.png" alt="soso" className="soso" />
+            </S.EmojiBox>
+            <S.EmojiBox>
+              <S.Emoji src="/images/sad.png" alt="sad" />
+            </S.EmojiBox>
+            <S.EmojiBox>
+              <S.Emoji src="/images/angry.png" alt="angry" />
+            </S.EmojiBox>
+          </S.EmojiBoxList>
+        </S.EmojiBoxWrapper>
       </S.EmotionWrapper>
     </>
   );

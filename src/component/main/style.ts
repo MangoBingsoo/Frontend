@@ -54,9 +54,32 @@ export const EmotionText = styled.ul`
   font-weight: 500;
 `;
 
-export const EmojiBox = styled.div`
+export const EmojiBoxWrapper = styled.div`
   width: 328px;
   height: 64px;
 `;
 
-export const EmojiTextBox = styled.div``;
+export const EmojiBoxList = styled.ul`
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+`;
+
+export const EmojiBox = styled.li`
+  width: 52px;
+  height: 64px;
+`;
+
+export const Emoji = styled.img`
+  width: 100%;
+  height: 100%;
+
+  &.happy {
+    width: 83%;
+  }
+
+  &.soso {
+    width: 135%;
+  }
+`;
