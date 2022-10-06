@@ -17,7 +17,7 @@ const Question = () => {
 
   useEffect(() => {
     setIsClicked(new Array(DATA[category].length).fill(false));
-  }, [DATA, category]);
+  }, [category]);
 
   return (
     <S.QuestionPageWRap>
