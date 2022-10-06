@@ -10,5 +10,5 @@ export const _HomeIndicatorContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 12px;
-  background-color: ${({ theme }) => theme.white};
+  background-color: transparent;
 `;
