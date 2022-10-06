@@ -10,6 +10,7 @@ import {
   FriendList,
 } from "./pages";
 import Tabbar from "./component/common/tabbar";
+import HomeIndicator from "./component/common/homeIndicator";
 import AuthPage from "./pages/page/AuthPage";
 import { useEffect, useState } from "react";
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<AuthPage />} />
         </Routes>
         {url !== "/" && <Tabbar />}
+        {url !== "/" && <HomeIndicator />}
       </BrowserRouter>
     </ThemeProvider>
   );
