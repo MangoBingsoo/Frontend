@@ -20,13 +20,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/main" element={<MainPage />} />
           <Route path="/my" element={<MyInfoPage />} />
           <Route path="/question" element={<QuestionPage />} />
           <Route path="/friend" element={<FriendPage />} />
-          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/" element={<AuthPage />} />
         </Routes>
-        {url !== "/auth" && <Tabbar />}
+        {url !== "/" && <Tabbar />}
       </BrowserRouter>
     </ThemeProvider>
   );
