@@ -4,17 +4,32 @@ import MeatballmenuGray from "../../Asset/friendList/meatballmenuGray.png";
 import { emotionImage } from "../../Asset/common/emotionImages";
 import { useState } from "react";
 
-export const FriendCardMain = () => {
+interface friendInfo {
+  name: string;
+  period: string;
+}
+
+interface ingFriendInfo {
+  name: string;
+  period: string;
+  emotionType: "happy" | "nomal" | "sad" | "sensitive";
+}
+
+export const FriendCardMain = ({
+  name,
+  period,
+  emotionType,
+}: ingFriendInfo) => {
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
   return (
     <S._CardBox>
       <S._ProfileCard
         backgroundColor="main"
-        backgroundImage={emotionImage("sensitive")}
+        backgroundImage={emotionImage(emotionType)}
         style={{ paddingLeft: "68px" }}
       >
-        <S._UserName color="white">오종진</S._UserName>
-        <S._dateText>생리 1일차</S._dateText>
+        <S._UserName color="white">{name}</S._UserName>
+        <S._dateText>{period}</S._dateText>
         <img
           src={MeatballmenuWhite}
           onClick={() => setDeleteModal(!deleteModal)}
@@ -25,15 +40,15 @@ export const FriendCardMain = () => {
   );
 };
 
-export const FriendCardSecondary = () => {
+export const FriendCardSecondary = ({ name, period }: friendInfo) => {
   return (
     <S._CardBox>
       <S._ProfileCard
         backgroundColor="secondary"
         style={{ paddingLeft: "14px" }}
       >
-        <S._UserName color="white">기준</S._UserName>
-        <S._dateText>1일 뒤 예정</S._dateText>
+        <S._UserName color="white">{name}</S._UserName>
+        <S._dateText>{period}</S._dateText>
         <img src={MeatballmenuWhite} />
       </S._ProfileCard>
     </S._CardBox>
@@ -44,7 +59,15 @@ export const FriendCardGray = () => {
   return (
     <S._CardBox>
       <S._ProfileCardGray>
-        <S._UserName color="gray700">남가연</S._UserName>
+        <S._UserName color="gray700">이정윤</S._UserName>
+        <img src={MeatballmenuGray} />
+      </S._ProfileCardGray>
+      <S._ProfileCardGray>
+        <S._UserName color="gray700">김범진</S._UserName>
+        <img src={MeatballmenuGray} />
+      </S._ProfileCardGray>
+      <S._ProfileCardGray>
+        <S._UserName color="gray700">김승진</S._UserName>
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
       <S._ProfileCardGray>
@@ -52,15 +75,19 @@ export const FriendCardGray = () => {
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
       <S._ProfileCardGray>
-        <S._UserName color="gray700">남가연</S._UserName>
+        <S._UserName color="gray700">오종진</S._UserName>
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
       <S._ProfileCardGray>
-        <S._UserName color="gray700">남가연</S._UserName>
+        <S._UserName color="gray700">기준</S._UserName>
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
       <S._ProfileCardGray>
-        <S._UserName color="gray700">남가연</S._UserName>
+        <S._UserName color="gray700">홍길동</S._UserName>
+        <img src={MeatballmenuGray} />
+      </S._ProfileCardGray>
+      <S._ProfileCardGray>
+        <S._UserName color="gray700">김철수</S._UserName>
         <img src={MeatballmenuGray} />
       </S._ProfileCardGray>
     </S._CardBox>

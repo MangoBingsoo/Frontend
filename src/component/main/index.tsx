@@ -2,6 +2,7 @@ import * as S from "./style";
 import * as I from "../../Asset";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // css import
+import useMember from "../../hooks/user/useMember";
 import { useCallback, useState, MouseEvent } from "react";
 import { emotionImage } from "../../Asset/common/emotionImages";
 
@@ -13,6 +14,9 @@ const Main: React.FC = () => {
   const removeClick = useCallback((e: MouseEvent<HTMLDivElement>): void => {
     e.stopPropagation();
   }, []);
+
+  const { user } = useMember();
+  // console.log(user);
 
   return (
     <div onClick={() => setIsClick(false)} style={{ height: "100vh" }}>

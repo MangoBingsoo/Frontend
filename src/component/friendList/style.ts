@@ -20,10 +20,11 @@ export const _MainTextBox = styled.div<{
     font-size: 22px;
     color: ${({ theme, highlightColor }) => theme[highlightColor]};
   }
+  margin-top: 30px;
 `;
 
 export const _CardBox = styled.div`
-  margin: 12px 0 40px 0;
+  margin: 12px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 12px 14px;
@@ -114,4 +115,11 @@ export const _DeleteModal = styled.div`
   position: absolute;
   top: 36px;
   right: 13px;
+`;
+
+export const Row = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 `;

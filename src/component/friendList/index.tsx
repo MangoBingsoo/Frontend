@@ -13,11 +13,28 @@ const FriendList = () => {
       <S._MainTextBox color="black" highlightColor="main">
         지금 <i>생리 중</i>인 친구
       </S._MainTextBox>
-      <FriendCardMain />
+      <S.Row>
+        <FriendCardMain
+          name="김기영"
+          period="생리 3일차"
+          emotionType="sensitive"
+        />
+        <FriendCardMain name="김의찬" period="생리 1주차" emotionType="nomal" />
+      </S.Row>
+      <S.Row>
+        <FriendCardMain name="주보미" period="생리 2일차" emotionType="sad" />
+      </S.Row>
       <S._MainTextBox color="black" highlightColor="secondary">
         <i>생리 예정</i>인 친구
       </S._MainTextBox>
-      <FriendCardSecondary />
+      <S.Row>
+        <FriendCardSecondary name="양채원" period="1주 뒤 예정" />
+        <FriendCardSecondary name="정대현" period="3일 뒤 예정" />
+      </S.Row>
+      <S.Row>
+        <FriendCardSecondary name="문정민" period="5일 뒤 예정" />
+        <FriendCardSecondary name="김준호" period="1일 뒤 예정" />
+      </S.Row>
       <S._MainTextBox color="gray700" highlightColor="white">
         그 외 친구
       </S._MainTextBox>
