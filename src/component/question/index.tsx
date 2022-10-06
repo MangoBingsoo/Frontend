@@ -80,10 +80,10 @@ const Question = () => {
                 key={`${question.id}`}
               >
                 <S.QuestionWrap>
-                  <div style={{ display: "flex", flexDirection: "row" }}>
+                  <S.QuestionCharAndTextWrap>
                     <S.QuestionCharWrap>Q. </S.QuestionCharWrap>
                     <span>{question.question}</span>
-                  </div>
+                  </S.QuestionCharAndTextWrap>
                   {isClicked[question.id] ? (
                     <S.QuestionUnderArrow
                       onClick={() => {

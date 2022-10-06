@@ -72,6 +72,12 @@ export const QuestionWrap = styled.div`
   align-items: center;
 `;
 
+export const QuestionCharAndTextWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+`;
+
 export const QuestionCharWrap = styled.div`
   font-size: 13px;
   margin-right: 10px;
