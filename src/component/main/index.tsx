@@ -3,11 +3,14 @@ import * as I from "../../Asset";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // css import
 import { useEffect, useState } from "react";
-
+import useMember from "../../hooks/user/useMember";
 
 const Main: React.FC = () => {
   const [value, onChange] = useState(new Date());
   const [isClick, setSetClick] = useState<boolean>(false);
+
+  const { user } = useMember();
+  console.log(user);
 
   return (
     <>
