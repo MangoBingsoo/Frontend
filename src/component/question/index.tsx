@@ -26,7 +26,7 @@ const Question = () => {
         <S.QuestionTitle>
           월경이 궁금한{" "}
           <span style={{ color: `${theme.main}` }}>
-            {category === 0 ? "남성" : category === 1 ? "여성" : "학생"}
+            {category === 0 ? "남학생" : category === 1 ? "여학생" : "모든"}
           </span>
           분들을위해
         </S.QuestionTitle>
@@ -40,7 +40,7 @@ const Question = () => {
               setCategory(0);
             }}
           >
-            남성
+            남학생
           </S.QuestionCategory>
           <S.QuestionCategory
             backgroundColor={`${category === 1 ? theme.main : theme.gray300}`}
@@ -49,7 +49,7 @@ const Question = () => {
               setCategory(1);
             }}
           >
-            여성
+            여학생
           </S.QuestionCategory>
           <S.QuestionCategory
             backgroundColor={`${category === 2 ? theme.main : theme.gray300}`}
@@ -58,7 +58,7 @@ const Question = () => {
               setCategory(2);
             }}
           >
-            학생
+            전체
           </S.QuestionCategory>
         </S.QuestionCategoryWrap>
       </S.QuestionCategoryBox>
