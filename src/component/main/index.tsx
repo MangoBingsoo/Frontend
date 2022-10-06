@@ -2,7 +2,8 @@ import * as S from "./style";
 import * as I from "../../Asset";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // css import
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 
 const Main: React.FC = () => {
   const [value, onChange] = useState(new Date());
