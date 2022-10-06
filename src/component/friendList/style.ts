@@ -100,3 +100,18 @@ export const _PlusButton = styled.div`
   bottom: 78px;
   box-shadow: 0 4px 5px 0px rgb(0 0 0 / 0.3); ;
 `;
+
+export const _DeleteModal = styled.div`
+  width: 68px;
+  height: 28px;
+  background-color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.system_red};
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  position: absolute;
+  top: 36px;
+  right: 13px;
+`;
