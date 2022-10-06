@@ -11,5 +11,6 @@ const emotionImagesList: Record<EmotionType, string> = {
   sad: Sad,
   sensitive: Sensitive,
 };
+
 export const emotionImage = (emotionType: EmotionType) =>
   emotionImagesList[emotionType];
