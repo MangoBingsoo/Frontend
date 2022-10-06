@@ -7,8 +7,9 @@ import { theme } from "../../../theme";
 const Tabbar: React.FC = () => {
   const { pathname } = useLocation();
 
-  const select = (currentPath: string) => {
-    return currentPath === pathname ? theme.main : theme.gray500;
+  const isSelect = (currentPath: string[]) => {
+    const isSelectArray = currentPath.map((path) => pathname === path);
+    return isSelectArray.includes(true);
   };
 
   return (
@@ -18,28 +19,28 @@ const Tabbar: React.FC = () => {
           <S.ListElement>
             <Link to={"/friend"}>
               <S.StyledSvg>
-                <I.Friend color={select("/friend")} />
+                <I.Friend isSelect={isSelect(["/friend", "/friend_add"])} />
               </S.StyledSvg>
             </Link>
           </S.ListElement>
           <S.ListElement>
             <Link to={"/main"}>
               <S.StyledSvg>
-                <I.Main color={select("/main")} />
+                <I.Main isSelect={isSelect(["/"])} />
               </S.StyledSvg>
             </Link>
           </S.ListElement>
           <S.ListElement>
             <Link to={"/question"}>
               <S.StyledSvg>
-                <I.Question color={select("/question")} />
+                <I.Question isSelect={isSelect(["/question"])} />
               </S.StyledSvg>
             </Link>
           </S.ListElement>
           <S.ListElement>
             <Link to={"/my"}>
               <S.StyledSvg>
-                <I.Mypage color={select("/my")} />
+                <I.Mypage isSelect={isSelect(["/my"])} />
               </S.StyledSvg>
             </Link>
           </S.ListElement>
