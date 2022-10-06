@@ -21,21 +21,28 @@ export const FriendCardMain = ({
   emotionType,
 }: ingFriendInfo) => {
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
+  const [viewProfileCard, setViewProfileCard] = useState<boolean>(true);
   return (
     <S._CardBox>
-      <S._ProfileCard
-        backgroundColor="main"
-        backgroundImage={emotionImage(emotionType)}
-        style={{ paddingLeft: "68px" }}
-      >
-        <S._UserName color="white">{name}</S._UserName>
-        <S._dateText>{period}</S._dateText>
-        <img
-          src={MeatballmenuWhite}
-          onClick={() => setDeleteModal(!deleteModal)}
-        />
-        {deleteModal && <S._DeleteModal>친구 삭제</S._DeleteModal>}
-      </S._ProfileCard>
+      {viewProfileCard ? (
+        <S._ProfileCard
+          backgroundColor="main"
+          backgroundImage={emotionImage(emotionType)}
+          style={{ paddingLeft: "68px" }}
+        >
+          <S._UserName color="white">{name}</S._UserName>
+          <S._dateText>{period}</S._dateText>
+          <img
+            src={MeatballmenuWhite}
+            onClick={() => setDeleteModal(!deleteModal)}
+          />
+          {deleteModal && (
+            <S._DeleteModal onClick={() => setViewProfileCard(false)}>
+              친구 삭제
+            </S._DeleteModal>
+          )}
+        </S._ProfileCard>
+      ) : null}
     </S._CardBox>
   );
 };
