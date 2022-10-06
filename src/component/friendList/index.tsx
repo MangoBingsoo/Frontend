@@ -14,7 +14,7 @@ const FriendList = () => {
   return (
     <S._FriendListContainer>
       <S._MainTextBox color="black" highlightColor="main">
-        지금 <i>생리 중</i>인 친구
+        지금 <i>월경 중</i>인 친구
       </S._MainTextBox>
       <S.Row>
         <FriendCardMain
@@ -28,7 +28,7 @@ const FriendList = () => {
         <FriendCardMain name="이정윤" period="생리 1주차" emotionType="sad" />
       </S.Row>
       <S._MainTextBox color="black" highlightColor="secondary">
-        <i>생리 예정</i>인 친구
+        <i>월경 예정</i>인 친구
       </S._MainTextBox>
       <S.Row>
         <FriendCardSecondary name="전영준" period="1일 뒤 예정" />
