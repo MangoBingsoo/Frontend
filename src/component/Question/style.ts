@@ -17,7 +17,7 @@ export const QuestionTitleWrap = styled.div`
 `;
 
 export const QuestionTitle = styled.span`
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   margin-top: 76px;
   font-weight: bold;
@@ -27,13 +27,13 @@ export const QuestionCategoryBox = styled.div`
   width: 414px;
   height: 50px;
   display: flex;
-  margin: 30px 0;
+  margin: 20px 0;
   justify-content: center;
 `;
 
 export const QuestionCategoryWrap = styled.div`
   width: 374px;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   border-radius: 50px;
   background-color: #f6f6f6;
@@ -60,7 +60,6 @@ export const QuestionCategory = styled.span<{
 export const QuestionBox = styled.div`
   width: 414px;
   height: 600px;
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,12 +74,14 @@ export const QuestionTextWrap = styled.div`
 
 export const QuestionCharAndTextWrap = styled.div`
   display: flex;
+  white-space: pre-wrap;
   flex-direction: row;
+  width: 90%;
   align-items: flex-start;
 `;
 
 export const QuestionCharWrap = styled.div`
-  font-size: 13px;
+  font-size: 16px;
   margin-right: 10px;
   display: flex;
   align-items: center;
@@ -91,18 +92,18 @@ export const QuestionWrap = styled.div<{
   textColor: string;
   size: string;
 }>`
-  width: 339px;
-  height: ${({ size }) => (size === "false" ? "53px" : "150px")};
+  width: 374px;
   display: flex;
+
   text-align: left;
   /* align-items: center; */
-
+  transition: all 0.3s;
   padding: 15px 15px 15px 20px;
   background-color: ${({ backgroundColor }) => backgroundColor};
   color: ${({ textColor }) => textColor};
-  margin: 15px 0 0 0;
+  margin-bottom: 15px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 16px;
   flex-direction: ${({ size }) => (size === "false" ? "row" : "column")};
 `;
 
@@ -115,7 +116,7 @@ export const QuestionUnderArrow = styled.div`
 `;
 
 export const QueestionWithAnswer = styled.div`
-  width: 280px;
+  width: 90%;
   height: auto;
   display: flex;
   /* align-items: flex-start; */
@@ -124,7 +125,7 @@ export const QueestionWithAnswer = styled.div`
   border-top: 1px white solid;
   text-align: left;
   padding: 15px 0 0 0;
-  font-size: 13px;
+  font-size: 16px;
   flex-direction: row;
 `;
 
@@ -136,7 +137,7 @@ export const AnswerCharWrap = styled.div`
 `;
 
 export const AnswerChar = styled.span`
-  font-size: 13px;
+  font-size: 16px;
   margin-right: 10px;
   /* display: flex; */
   align-items: center;

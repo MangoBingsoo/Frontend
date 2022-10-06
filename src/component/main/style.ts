@@ -37,12 +37,16 @@ export const EmotionWrapper = styled.div`
   background: #de828233;
   margin: auto;
   margin-top: 60px;
-  justify-content: center;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 `;
 
 export const EmotionTextBox = styled.div`
   display: flex;
-  height: 70px;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -55,33 +59,27 @@ export const EmotionText = styled.ul`
 `;
 
 export const EmojiBoxWrapper = styled.div`
-  width: 328px;
-  height: 64px;
-  margin-left: 25px;
+  width: 95%;
 `;
 
-export const EmojiBoxList = styled.ul`
+export const EmojiBoxList = styled.div`
   display: flex;
   list-style: none;
+  justify-content: space-between;
+`;
+
+export const EmojiBox = styled.div`
   justify-content: center;
-  gap: 40px;
+  text-align: center;
+  padding: 10px;
+  color: #8d8d8d;
 `;
 
-export const EmojiBox = styled.li`
-  width: 52px;
-  height: 64px;
+export const EmojiImg = styled.img`
+  width: 50px;
+  height: 50px;
 `;
 
-export const Emoji = styled.img`
-  width: 100%;
-  height: 100%;
-
-  &.happy {
-    width: 83%;
-  }
-
-  &.soso {
-    width: 135%;
-    margin-left: -15px;
-  }
+export const EmojiText = styled.div`
+  text-align: center;
 `;

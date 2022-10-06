@@ -1,9 +1,5 @@
 import styled from "styled-components";
 import plus from "../../Asset/friendList/plus.png";
-import Happy from "../../Asset/common/happy.png";
-import Sad from "../../Asset/common/sad.png";
-import Angry from "../../Asset/common/angry.png";
-import Normal from "../../Asset/common/normal.png";
 
 export const _FriendListContainer = styled.div`
   width: 100%;
@@ -103,4 +99,19 @@ export const _PlusButton = styled.div`
   right: 20px;
   bottom: 78px;
   box-shadow: 0 4px 5px 0px rgb(0 0 0 / 0.3); ;
+`;
+
+export const _DeleteModal = styled.div`
+  width: 68px;
+  height: 28px;
+  background-color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.system_red};
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  position: absolute;
+  top: 36px;
+  right: 13px;
 `;
