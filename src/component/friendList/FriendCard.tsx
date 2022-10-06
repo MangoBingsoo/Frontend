@@ -2,8 +2,10 @@ import * as S from "./style";
 import MeatballmenuWhite from "../../Asset/friendList/meatballmenuWhite.png";
 import MeatballmenuGray from "../../Asset/friendList/meatballmenuGray.png";
 import { emotionImage } from "../../Asset/common/emotionImages";
+import { useState } from "react";
 
-export const FriendCardMain = (img: any) => {
+export const FriendCardMain = () => {
+  const [deleteModal, setDeleteModal] = useState<boolean>(false);
   return (
     <S._CardBox>
       <S._ProfileCard
@@ -13,7 +15,11 @@ export const FriendCardMain = (img: any) => {
       >
         <S._UserName color="white">오종진</S._UserName>
         <S._dateText>생리 1일차</S._dateText>
-        <img src={MeatballmenuWhite} />
+        <img
+          src={MeatballmenuWhite}
+          onClick={() => setDeleteModal(!deleteModal)}
+        />
+        {deleteModal && <S._DeleteModal>친구 삭제</S._DeleteModal>}
       </S._ProfileCard>
     </S._CardBox>
   );

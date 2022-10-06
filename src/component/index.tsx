@@ -1,5 +1,6 @@
 export { default as Question } from "./question";
 export { default as Main } from "./main";
 export { default as MyInfo } from "./myinfo";
-export { default as FriendList } from "./friendList/FriendList";
-export { default as Auth } from "./oauth";
+export { default as FriendList } from "./friendList";
+export { default as FriendAdd } from "./friendList/friendAdd";
+export { default as Oauth } from "./oauth";
