@@ -5,7 +5,8 @@ export const QuestionPageWRap = styled.div`
   height: 896px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
 export const QuestionTitleWrap = styled.div`
@@ -58,14 +59,14 @@ export const QuestionCategory = styled.span<{
 
 export const QuestionBox = styled.div`
   width: 414px;
-  height: 716px;
+  height: 600px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const QuestionWrap = styled.div`
+export const QuestionTextWrap = styled.div`
   justify-content: space-between;
   display: flex;
   width: 100%;
@@ -85,7 +86,7 @@ export const QuestionCharWrap = styled.div`
   align-items: center;
 `;
 
-export const QuestionTextWrap = styled.div<{
+export const QuestionWrap = styled.div<{
   backgroundColor: string;
   textColor: string;
   size: string;

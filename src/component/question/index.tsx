@@ -16,12 +16,8 @@ const Question = () => {
   );
 
   useEffect(() => {
-    console.log(category);
     setIsClicked(new Array(DATA[category].length).fill(false));
   }, [DATA, category]);
-  useEffect(() => {
-    console.log(isClicked);
-  }, [isClicked]);
 
   return (
     <S.QuestionPageWRap>
@@ -68,59 +64,57 @@ const Question = () => {
       <S.QuestionBox>
         {DATA[category].map((question) => {
           return (
-            <>
-              <S.QuestionTextWrap
-                size={`${isClicked[question.id]}`}
-                backgroundColor={`${
-                  isClicked[question.id] ? theme.main : theme.gray300
-                }`}
-                textColor={`${
-                  isClicked[question.id] ? theme.white : theme.black
-                }`}
-                key={`${question.id}`}
-              >
-                <S.QuestionWrap>
-                  <S.QuestionCharAndTextWrap>
-                    <S.QuestionCharWrap>Q. </S.QuestionCharWrap>
-                    <span>{question.question}</span>
-                  </S.QuestionCharAndTextWrap>
-                  {isClicked[question.id] ? (
-                    <S.QuestionUnderArrow
-                      onClick={() => {
-                        setIsClicked((prev) =>
-                          prev.map((value: any, idx) =>
-                            idx === question.id ? !value : value
-                          )
-                        );
-                      }}
-                      style={{ transform: "rotate(180deg)" }}
-                    >
-                      <I.UnderArrow color={theme.white} />
-                    </S.QuestionUnderArrow>
-                  ) : (
-                    <S.QuestionUnderArrow
-                      onClick={() => {
-                        setIsClicked((prev) =>
-                          prev.map((value: any, idx) =>
-                            idx === question.id ? !value : value
-                          )
-                        );
-                      }}
-                    >
-                      <I.UnderArrow color={theme.gray700} />
-                    </S.QuestionUnderArrow>
-                  )}
-                </S.QuestionWrap>
-                {isClicked[question.id] && (
-                  <S.QueestionWithAnswer>
-                    <S.AnswerCharWrap>
-                      <S.AnswerChar>A. </S.AnswerChar>
-                    </S.AnswerCharWrap>
-                    <span>{question.answer}</span>
-                  </S.QueestionWithAnswer>
+            <S.QuestionWrap
+              size={`${isClicked[question.id]}`}
+              backgroundColor={`${
+                isClicked[question.id] ? theme.main : theme.gray300
+              }`}
+              textColor={`${
+                isClicked[question.id] ? theme.white : theme.black
+              }`}
+              key={question.id}
+            >
+              <S.QuestionTextWrap>
+                <S.QuestionCharAndTextWrap>
+                  <S.QuestionCharWrap>Q. </S.QuestionCharWrap>
+                  <span>{question.question}</span>
+                </S.QuestionCharAndTextWrap>
+                {isClicked[question.id] ? (
+                  <S.QuestionUnderArrow
+                    onClick={() => {
+                      setIsClicked((prev) =>
+                        prev.map((value: any, idx) =>
+                          idx === question.id ? !value : value
+                        )
+                      );
+                    }}
+                    style={{ transform: "rotate(180deg)" }}
+                  >
+                    <I.UnderArrow color={theme.white} />
+                  </S.QuestionUnderArrow>
+                ) : (
+                  <S.QuestionUnderArrow
+                    onClick={() => {
+                      setIsClicked((prev) =>
+                        prev.map((value: any, idx) =>
+                          idx === question.id ? !value : value
+                        )
+                      );
+                    }}
+                  >
+                    <I.UnderArrow color={theme.gray700} />
+                  </S.QuestionUnderArrow>
                 )}
               </S.QuestionTextWrap>
-            </>
+              {isClicked[question.id] && (
+                <S.QueestionWithAnswer>
+                  <S.AnswerCharWrap>
+                    <S.AnswerChar>A. </S.AnswerChar>
+                  </S.AnswerCharWrap>
+                  <span>{question.answer}</span>
+                </S.QueestionWithAnswer>
+              )}
+            </S.QuestionWrap>
           );
         })}
       </S.QuestionBox>

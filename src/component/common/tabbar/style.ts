@@ -7,6 +7,8 @@ export const TabbarWrapper = styled.div`
   width: 100%;
   height: 49px;
   justify-content: center;
+  z-index: 2;
+  background-color: white;
 `;
 
 export const TabbarList = styled.ul`
