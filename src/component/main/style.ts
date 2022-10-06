@@ -21,13 +21,26 @@ export const Text = styled.li`
   }
 `;
 
-export const StyledCalendar = styled.div`
+export const StyledCalendar = styled.div<{ theme: any }>`
   width: 371px;
   margin: auto;
   padding-top: 40px;
 
   .react-calendar {
     width: 100%;
+  }
+
+  .react-calendar__month-view__days {
+    > .react-calendar__tile--now {
+      :enabled {
+        border-radius: 40px;
+        background-color: ${({ theme }) => theme.gray300};
+      }
+    }
+    > .react-calendar__tile--active {
+      border-radius: 40px;
+      background-color: ${({ theme }) => theme.main};
+    }
   }
 `;
 
