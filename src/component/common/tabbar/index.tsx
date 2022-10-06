@@ -26,7 +26,7 @@ const Tabbar: React.FC = () => {
           <S.ListElement>
             <Link to={"/main"}>
               <S.StyledSvg>
-                <I.Main isSelect={isSelect(["/"])} />
+                <I.Main isSelect={isSelect(["/main"])} />
               </S.StyledSvg>
             </Link>
           </S.ListElement>
