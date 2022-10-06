@@ -16,6 +16,16 @@ const Main: React.FC = () => {
       <S.StyledCalendar>
         <Calendar />
       </S.StyledCalendar>
+      <S.EmotionWrapper>
+        <S.EmotionTextBox>
+          <S.EmotionText>
+            <S.Text className="date">7일,</S.Text>
+            <S.Text>추혜연님의 기분을 들려주세요</S.Text>
+          </S.EmotionText>
+        </S.EmotionTextBox>
+        <S.EmojiBox />
+        <S.EmojiTextBox />
+      </S.EmotionWrapper>
     </>
   );
 };
