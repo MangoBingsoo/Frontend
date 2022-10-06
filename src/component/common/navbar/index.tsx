@@ -7,7 +7,7 @@ interface NavBarProps {
 }
 
 const NavBar = ({ isBack, onClickBack }: NavBarProps) => {
-  console.log(isBack);
+  // console.log(isBack);
   return (
     <>
       <S._NavBarContainer>
