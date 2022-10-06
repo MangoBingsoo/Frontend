@@ -1,5 +1,5 @@
-export { Friend } from "./friend";
-export { Main } from "./main";
-export { Mypage } from "./mypage";
-export { Question } from "./question";
+export { Friend } from "./tabbar/friend";
+export { Main } from "./tabbar/main";
+export { Mypage } from "./tabbar/mypage";
+export { Question } from "./tabbar/question";
 export { UnderArrow } from "./underArrow";
