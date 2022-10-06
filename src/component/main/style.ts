@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../theme";
 
 export const TextBox = styled.div`
   margin-top: 40px;
@@ -19,5 +18,15 @@ export const DateTextList = styled.ul`
 export const Text = styled.li`
   &.date {
     color: #de8282;
+  }
+`;
+
+export const StyledCalendar = styled.div`
+  width: 371px;
+  margin: auto;
+  padding-top: 40px;
+
+  .react-calendar {
+    width: 100%;
   }
 `;
