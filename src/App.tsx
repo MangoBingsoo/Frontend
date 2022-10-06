@@ -10,19 +10,30 @@ import {
   FriendList,
 } from "./pages";
 import Tabbar from "./component/common/tabbar";
+import AuthPage from "./pages/page/AuthPage";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [url, setUrl] = useState("");
+  const getPath = () => {
+    setUrl(window.location.pathname);
+  };
+  useEffect(() => {
+    getPath();
+  }, [window.location.pathname]);
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/main" element={<MainPage />} />
           <Route path="/my" element={<MyInfoPage />} />
           <Route path="/question" element={<QuestionPage />} />
           <Route path="/friend" element={<FriendList />} />
           <Route path="/friend_add" element={<FriendAdd />} />
+          <Route path="/" element={<AuthPage />} />
         </Routes>
-        <Tabbar />
+        {url !== "/" && <Tabbar />}
       </BrowserRouter>
     </ThemeProvider>
   );

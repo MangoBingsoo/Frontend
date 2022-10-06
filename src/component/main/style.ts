@@ -57,13 +57,14 @@ export const EmotionText = styled.ul`
 export const EmojiBoxWrapper = styled.div`
   width: 328px;
   height: 64px;
+  margin-left: 25px;
 `;
 
 export const EmojiBoxList = styled.ul`
   display: flex;
   list-style: none;
-  gap: 30px;
   justify-content: center;
+  gap: 40px;
 `;
 
 export const EmojiBox = styled.li`
@@ -81,5 +82,6 @@ export const Emoji = styled.img`
 
   &.soso {
     width: 135%;
+    margin-left: -15px;
   }
 `;
