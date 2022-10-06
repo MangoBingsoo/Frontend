@@ -1,9 +1,5 @@
 import styled from "styled-components";
 import plus from "../../Asset/friendList/plus.png";
-import Happy from "../../Asset/common/happy.png";
-import Sad from "../../Asset/common/sad.png";
-import Angry from "../../Asset/common/angry.png";
-import Normal from "../../Asset/common/normal.png";
 
 export const _FriendListContainer = styled.div`
   width: 100%;
