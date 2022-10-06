@@ -1,4 +1,5 @@
 import * as S from "./style";
+import Calendar from "react-calendar";
 
 const Main: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Main: React.FC = () => {
           <S.Text className="date">13일</S.Text>
           <S.Text>남았습니다.</S.Text>
         </S.DateTextList>
+        <Calendar />
       </S.TextBox>
     </>
   );
