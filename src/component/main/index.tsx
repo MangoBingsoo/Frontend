@@ -30,7 +30,7 @@ const Main: React.FC = () => {
     e.stopPropagation();
   }, []);
 
-useEffect(() => {
+  useEffect(() => {
     getFeel();
   }, [value]);
 
@@ -50,7 +50,7 @@ useEffect(() => {
 
     if (index !== -1) {
       setSelectedIndex(userArr[index].feeling);
-      console.log(userArr[index].feeling);
+      // console.log(userArr[index].feeling);
 
       if (0 === userArr[index].feeling) {
         setState(0);
@@ -68,7 +68,6 @@ useEffect(() => {
     setState(null);
     return false;
   };
-
 
   return (
     <div onClick={() => setIsClick(false)} style={{ height: "100vh" }}>

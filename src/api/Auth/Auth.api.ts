@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 
 class Auth {
   public loginSuccess(res: any) {
-    console.log(res);
+    // console.log(res);
     localStorage.setItem("token", res.credential);
   }
   public loginFailure() {
-    console.log("로그인 못함");
+    // console.log("로그인 못함");
   }
 }
 
