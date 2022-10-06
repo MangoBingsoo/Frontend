@@ -27,6 +27,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+        <StatusBar />
+
         <Routes>
           <Route path="/main" element={<MainPage />} />
           <Route path="/my" element={<MyInfoPage />} />
@@ -36,8 +38,6 @@ function App() {
           <Route path="/" element={<AuthPage />} />
         </Routes>
         {url !== "/" && <Tabbar />}
-        <HomeIndicator />
-        <StatusBar />
       </BrowserRouter>
     </ThemeProvider>
   );

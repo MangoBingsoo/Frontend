@@ -4,7 +4,7 @@ export const _StatusBarContainer = styled.div`
   width: 100%;
   z-index: 2;
   height: 44px;
-  position: absolute;
+  margin-bottom: 10px;
   position: fixed;
   top: 0;
   > img {

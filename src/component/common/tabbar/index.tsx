@@ -3,6 +3,7 @@ import * as I from "../../../Asset/index";
 import { Link, useLocation } from "react-router-dom";
 import { css } from "styled-components";
 import { theme } from "../../../theme";
+import HomeIndicator from "../homeIndicator";
 
 const Tabbar: React.FC = () => {
   const { pathname } = useLocation();
@@ -45,6 +46,7 @@ const Tabbar: React.FC = () => {
             </Link>
           </S.ListElement>
         </S.TabbarList>
+        <HomeIndicator />
       </S.TabbarWrapper>
     </>
   );

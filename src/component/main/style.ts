@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const TextBox = styled.div`
-  margin-top: 40px;
-  margin-left: 20px;
+  margin-top: 70px;
+  margin-left: 25px;
   font-size: 20px;
   font-weight: 700;
 `;
