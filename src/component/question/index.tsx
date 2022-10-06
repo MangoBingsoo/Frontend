@@ -7,7 +7,6 @@ import * as S from "./style";
 import * as I from "../../Asset/index";
 import { theme } from "../../theme";
 import { useEffect, useState } from "react";
-import { queries } from "@testing-library/react";
 
 const Question = () => {
   const DATA = [DATA_FOR_MAN, DATA_FOR_WOMAN, DATA_FOR_CHILDREN];
@@ -81,10 +80,10 @@ const Question = () => {
                 key={`${question.id}`}
               >
                 <S.QuestionWrap>
-                  <div style={{ display: "flex", flexDirection: "row" }}>
+                  <S.QuestionCharAndTextWrap>
                     <S.QuestionCharWrap>Q. </S.QuestionCharWrap>
                     <span>{question.question}</span>
-                  </div>
+                  </S.QuestionCharAndTextWrap>
                   {isClicked[question.id] ? (
                     <S.QuestionUnderArrow
                       onClick={() => {
