@@ -7,7 +7,7 @@ const useMember = () => {
     try {
       const data = await UserApi.getUser();
       setUser(data);
-      console.log(data);
+      //   console.log(data);
     } catch (error) {
       console.log(error);
     }

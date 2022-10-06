@@ -16,7 +16,7 @@ const Main: React.FC = () => {
   }, []);
 
   const { user } = useMember();
-  console.log(user);
+  // console.log(user);
 
   return (
     <div onClick={() => setIsClick(false)} style={{ height: "100vh" }}>
