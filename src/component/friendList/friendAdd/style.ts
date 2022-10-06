@@ -8,6 +8,7 @@ export const _FriendAddContainer = styled.div`
 export const _InputWrapper = styled.div`
   width: 100%;
   display: block;
+  margin-top: 32px;
 `;
 
 export const _Label = styled.p`
