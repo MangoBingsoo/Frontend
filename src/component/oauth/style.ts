@@ -46,3 +46,12 @@ export const AuthLoginText = styled.span`
   font-weight: 700;
   font-size: 18px;
 `;
+
+export const LogoImg = styled.img`
+  position: absolute;
+  display: flex;
+  top: 214px;
+  left: 109px;
+  width: 197px;
+  height: 240px;
+`;
