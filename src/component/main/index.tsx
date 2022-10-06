@@ -37,12 +37,12 @@ const Main: React.FC = () => {
       </S.StyledCalendar>
       {isClick ? (
         <S.EmotionWrapper onClick={removeClick}>
-          <S.EmotionTextBox>
+          <S.EmotionTextBoxWrapper>
             <S.EmotionText>
               <S.Text className="date">{value.getDate()}일, </S.Text>
               <S.Text>추혜연님의 기분을 들려주세요</S.Text>
             </S.EmotionText>
-          </S.EmotionTextBox>
+          </S.EmotionTextBoxWrapper>
           <S.EmojiBoxWrapper>
             <S.EmojiBoxList>
               <S.EmojiBox
